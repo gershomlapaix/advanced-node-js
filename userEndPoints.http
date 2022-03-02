@@ -1,0 +1,58 @@
+
+# GET http://127.0.0.1:8000/api/v1/users HTTP/1.1
+
+# POST http://127.0.0.1:8000/api/v1/users/signup HTTP/1.1
+# Content-Type: application/json
+
+# {
+    # "name":"Bon",    
+    # "email":"bon@gmail.com",
+    # "password":"bontete12",
+    # "passwordConfirm":"bontete12",
+    # "active":true 
+# }
+
+
+# POST http://127.0.0.1:8000/api/v1/users/login HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "email":"bon@gmail.com",
+#     "password":"bontete12"
+# }
+
+
+# Password reset
+# POST http://127.0.0.1:8000/api/v1/users/forgotPassword HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "email":"lapaix@gmail.com"
+# }
+
+
+# PATCH http://127.0.0.1:8000/api/v1/users/resetPassword/1daeccaa979292420c59d7685bb7a4a944baa12d2737ce12a6e87f95866f0789 HTTP/1.1
+# Content-Type: application/json
+
+# {
+    # "password":"newpass12",
+    # "passwordConfirm":"newpass12"
+# }
+
+
+
+# update password
+# PATCH  http://127.0.0.1:8000/api/v1/users/updatePassword HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmFiOTI2NGI4ZTdhZWJlNjhjMWE4NCIsImlhdCI6MTY0MzkwMzA0NywiZXhwIjoxNjUxNjc5MDQ3fQ.iOp9IKwruKXgTx4YGTP0sWE2gANbkUynix2r8ehkKaU
+# Content-Type: application/json
+
+# {
+#     "passwordCurrent":"newpass12",
+#     "passwordConfirm":"newpass1235",
+#     "password":"newpass123"
+# }
+
+
+# deactivate the user
+DELETE  http://127.0.0.1:8000/api/v1/users/deleteMe HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmMwN2ZhNjE0OTBlN2Y2NmI1OGM0ZCIsImlhdCI6MTY0MzkwNzExNSwiZXhwIjoxNjUxNjgzMTE1fQ.IGFXodSb_YOED6I2XgfiV339sxxx1W_F62lCXfjYbsw
